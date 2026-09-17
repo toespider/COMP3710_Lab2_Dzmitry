@@ -76,7 +76,7 @@ def naive_dft ( x ) :
 signal = square_wave_fourier (t , f0 , 50)
 # Time the naive DFT implementation
 start_time_naive = time . time ()
-dft_result = naive_dft ( signal )
+dft_result = naive_dft (signal)
 end_time_naive = time . time ()
 naive_duration = end_time_naive - start_time_naive
 # Time NumPy 's FFT implementation
@@ -95,8 +95,7 @@ else :
     print (" FFT was too fast to measure a significant duration difference .")
 # Check if our implementation is close to NumPy 's result
 # np. allclose is used for comparing floating - point arrays .
-print ( f"\nOur DFT implementation is close to NumPy 's FFT : {np. allclose ( dft_result ,
-fft_result )}")
+print ( f"\nOur DFT implementation is close to NumPy 's FFT : {np. allclose ( dft_result , fft_result )}")
 # 4. Prepare for Plotting
 # Generate the frequency axis for the plot .
 # np. fft . fftfreq returns the DFT sample frequencies .

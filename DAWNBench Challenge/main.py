@@ -19,7 +19,7 @@ import filenames
 import preprocess
 import networks
 
-print(jax.devices())W
+print(jax.devices())
 print("Using", jnp.ones(3).device_buffer.device())
 
 #TFDS returns dict of image and labels

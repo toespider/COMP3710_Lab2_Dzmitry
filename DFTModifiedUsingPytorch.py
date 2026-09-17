@@ -36,38 +36,41 @@ def square_wave_fourier(t, f0, N_harmonics):
 # 3. Modified naive_dft using PyTorch (Loop-based, CPU)
 def naive_dft(x):
     N = len(x)
-    X = torch.zeros(N, dtype=torch.complex128)
+    X = torch.zeros(N, dtype=torch.complex64)
+
     for k in range(N):
         for n in range(N):
             angle = -2j * torch.pi * k * n / N
-            X[k] += x[n] * torch.exp(torch.tensor(angle))
+            X[k] += x[n] * torch.exp(
+                torch.tensor(angle, dtype=torch.complex64)
+            )
+
     return X
 
 
-# 4. NEW: Vectorized GPU DFT using Tensor Operations
 def naive_dft_gpu(x):
     N = len(x)
-    # Move signal to target device and cast to complex128 (ComplexDouble)
-    x_device = x.to(device, dtype=torch.complex128)
 
-    # Create n and k indices for broadcasting
-    # Cast to float64 so the complex math promotes properly to complex128
-    n = torch.arange(N, device=device, dtype=torch.float64)
+    x_device = x.to(device, dtype=torch.complex64)
+
+    # Use float32 for MPS
+    n = torch.arange(N, device=device, dtype=torch.float32)
     k = n.view(-1, 1)
 
-    # Construct the DFT transformation matrix W
+    # Construct DFT matrix
     W = torch.exp(-2j * torch.pi * k * n / N)
 
-    # Force W to complex128 to strictly match x_device
-    W = W.to(torch.complex128)
+    # Ensure complex64
+    W = W.to(torch.complex64)
 
-    # Compute the DFT via matrix multiplication: W * x
+    # Matrix multiplication
     X = torch.matmul(W, x_device)
+
     return X
 
 
 # Create the time vector in PyTorch (equivalent to endpoint=False)
-t = torch.arange(N) * (T / N)
+t = torch.arange(N, dtype=torch.float32) * (T / N)
 
 # Construct a square wave using 50 harmonics
 signal = square_wave_fourier(t, f0, 50)
