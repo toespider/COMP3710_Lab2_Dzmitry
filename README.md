@@ -1,1 +1,14 @@
 Contains all code for Demo 2 of COMP3710
+Contains all demo results
+
+<img width="1198" height="796" alt="Screenshot 2026-09-18 at 8 27 45 am" src="https://github.com/user-attachments/assets/9e83f6e6-1159-4f78-ba27-7ec0e17f65b3" />
+
+
+<img width="1198" height="796" alt="image" src="https://github.com/user-attachments/assets/e4dc3c85-ad19-4f09-ad15-2f269da0adae" />
+
+--- DFT/FFT Performance Comparison ---
+1. Built-in FFT Execution Time:      0.001092 seconds
+2. Vectorized GPU DFT Execution Time:0.001380 seconds
+3. Naive Loop DFT Execution Time:    13.641975 seconds
+
+GPU DFT matches Built-in FFT: False
