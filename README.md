@@ -20,3 +20,5 @@ Although the vectorized DFT uses the GPU to perform many calculations in paralle
 
 
 <img width="720" height="719" alt="Figure_1" src="https://github.com/user-attachments/assets/87d82562-af3a-49a7-81cb-ab630313a68b" />
+
+<img width="635" height="475" alt="Screenshot 2026-09-18 at 8 50 25 am" src="https://github.com/user-attachments/assets/2fea11a1-8575-41b8-af35-533230c16460" />
