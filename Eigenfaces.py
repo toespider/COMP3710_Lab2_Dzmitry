@@ -69,8 +69,8 @@ ratio_cumsum = np . cumsum ( explained_variance_ratio )
 print ( ratio_cumsum . shape )
 eigenvalueCount = np . arange ( n_components )
 plt . plot ( eigenvalueCount , ratio_cumsum [: n_components ])
-plt . title ('Compactness ')
-plt . show ()
+plt.title ('Compactness ')
+plt.show ()
 
 from sklearn . ensemble import RandomForestClassifier
 from sklearn . model_selection import cross_val_score
