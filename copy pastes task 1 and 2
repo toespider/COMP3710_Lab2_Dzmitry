@@ -4,6 +4,8 @@ ls -lah /home/groups/comp3710/OASIS
 
 mkdir -p ~/comp3710_vae
 cd ~/comp3710_vae
+sbatch train.slurm
+squeue -u s4885581
 
 python3 -m venv ~/vae-env
 source ~/vae-env/bin/activate
