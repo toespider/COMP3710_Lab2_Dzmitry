@@ -12,3 +12,8 @@ Contains all demo results
 3. Naive Loop DFT Execution Time:    13.641975 seconds
 
 GPU DFT matches Built-in FFT: False
+
+Direct DFT is O(N^2), but FFT is O(NlogN)
+Native loop is two nested for loops, so O(N^2)
+
+Although the vectorized DFT uses the GPU to perform many calculations in parallel, it still requires \(O(N^2)\) operations because it constructs and multiplies by the complete DFT transformation matrix.
