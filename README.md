@@ -17,3 +17,6 @@ Direct DFT is O(N^2), but FFT is O(NlogN)
 Native loop is two nested for loops, so O(N^2)
 
 Although the vectorized DFT uses the GPU to perform many calculations in parallel, it still requires \(O(N^2)\) operations because it constructs and multiplies by the complete DFT transformation matrix.
+
+
+<img width="720" height="719" alt="Figure_1" src="https://github.com/user-attachments/assets/87d82562-af3a-49a7-81cb-ab630313a68b" />
