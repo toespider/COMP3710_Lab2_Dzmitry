@@ -34,6 +34,7 @@ Single epoch complete in 45.61 seconds.
 
 --- Starting Full Training for 30 Epochs ---
 Epoch 05/30 | Test Accuracy: 71.32% | Elapsed: 99.7s
-
-        macro avg       0.50      0.40      0.42       322
-     weighted avg       0.58      0.62      0.57       322
+Epoch 10/30 | Test Accuracy: 79.29% | Elapsed: 189.5s
+Epoch 15/30 | Test Accuracy: 84.11% | Elapsed: 279.4s
+Epoch 20/30 | Test Accuracy: 86.47% | Elapsed: 369.2s
+Epoch 25/30 | Test Accuracy: 91.99% | Elapsed: 458.9s
