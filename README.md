@@ -23,5 +23,17 @@ Although the vectorized DFT uses the GPU to perform many calculations in paralle
 
 <img width="635" height="475" alt="Screenshot 2026-09-18 at 8 50 25 am" src="https://github.com/user-attachments/assets/2fea11a1-8575-41b8-af35-533230c16460" />
 
+
+Using device: Tesla T4
+100%|██████████| 170M/170M [10:32<00:00, 270kB/s]
+
+--- Running Single Inference Pass (Demonstration Req) ---
+Inference step complete.
+--- Running Single Training Epoch (Demonstration Req) ---
+Single epoch complete in 45.61 seconds.
+
+--- Starting Full Training for 30 Epochs ---
+Epoch 05/30 | Test Accuracy: 71.32% | Elapsed: 99.7s
+
         macro avg       0.50      0.40      0.42       322
      weighted avg       0.58      0.62      0.57       322
